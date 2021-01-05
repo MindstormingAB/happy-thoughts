@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Thoughts from './components/Thoughts';
 import Footer from './components/Footer';
 
-const THOUGHTS_URL = 'https://happy-thoughts-technigo.herokuapp.com/thoughts';
+const THOUGHTS_URL = 'https://happy-thoughts-by-m.herokuapp.com/thoughts';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]);
