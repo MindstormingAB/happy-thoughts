@@ -53,7 +53,7 @@ section {
 }
 
 .input {
-  margin: 0 10px;
+  margin: 5px 10px;
   width: 90%;
   border: 1px solid #d0cfcf;
   font-family: inherit;
@@ -101,6 +101,11 @@ section {
 .message {
   margin: 10px;
   word-wrap: break-word;
+}
+
+.extra {
+  font-size: 10px;
+  padding: 0 10px 5px 10px;
 }
 
 .info {
@@ -168,6 +173,10 @@ section {
 
 
   .info {
+    font-size: 12px;
+  }
+
+  .extra {
     font-size: 12px;
   }
 

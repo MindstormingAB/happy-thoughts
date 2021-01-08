@@ -15,6 +15,8 @@ const Thoughts = ({ thoughts, onLiked, addNewThought }) => {
             created={thought.createdAt}
             likes={thought.hearts}
             message={thought.message}
+            author={thought.author}
+            category={thought.category}
             onLiked={onLiked}
           />
         );
