@@ -4,8 +4,7 @@ import Header from './components/Header';
 import Thoughts from './components/Thoughts';
 import Footer from './components/Footer';
 
-// const THOUGHTS_URL = 'https://happy-thoughts-by-m.herokuapp.com/thoughts';
-const THOUGHTS_URL = 'http://localhost:8080/thoughts';
+const THOUGHTS_URL = 'https://happy-thoughts-by-m.herokuapp.com/thoughts';
 
 export const App = () => {
   const [thoughts, setThoughts] = useState([]);
@@ -18,8 +17,6 @@ export const App = () => {
     fetch(THOUGHTS_URL)
       .then(response => response.json())
       .then(json => {
-        // const filteredThoughts = json.filter(thought => thought.message);
-        // const limitedThoughts = filteredThoughts.slice(0, 20);
         setThoughts(json);
       })
       .catch(error => console.error(error));
