@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import Likes from './Likes';
-import Time from './Time';
+import Likes from "./Likes";
+import Time from "./Time";
 
 const ThoughtInfo = ({ id, created, likes, onLiked }) => {
   return (
-    <div className='info'>
+    <div className="info">
       <Likes
         id={id}
         likes={likes}

@@ -3,7 +3,6 @@ import React from "react";
 const CategoryInput = ({ newCategory, setNewCategory }) => {
   return (
     <div>
-      {/* <p tabIndex="0" className="new-message">What's making you happy right now?</p> */}
       <input
         type="text"
         value={newCategory}

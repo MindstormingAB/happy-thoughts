@@ -37,14 +37,14 @@ section {
   align-items: center;
 }
 
-.thought, .new-thought {
+.thought, .new-thought, .filters {
   width: 250px;
   margin-bottom: 15px;
   border: 1px solid black;
   box-shadow: 5px 5px black;
 }
 
-.new-thought {
+.new-thought, .filters {
   background: #f2f0f0;
 }
 
@@ -54,7 +54,7 @@ section {
 
 .input {
   margin: 5px 10px;
-  width: 90%;
+  width: 218px;
   border: 1px solid #d0cfcf;
   font-family: inherit;
   font-size: inherit;
@@ -96,6 +96,39 @@ section {
 
 .length {
   font-size: 10px;
+}
+
+.filters {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px 0 10px;
+}
+
+.filter-input {
+  width: 130px;
+  border: 1px solid #d0cfcf;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px;
+}
+
+.filter-button {
+  width: fit-content;
+  border: none;
+  border-radius: 15px;
+  padding: 8px;
+  background: #ffadad;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 10px 0;
+  align-self: center;
 }
 
 .message {
@@ -150,11 +183,15 @@ section {
     font-size: 17px;
   }
 
-  .thought, .new-thought {
+  .thought, .new-thought, .filters {
     width: 500px;
     margin-bottom: 15px;
     border: 1px solid black;
     box-shadow: 5px 5px black;
+  }
+
+  .input {
+    width: 468px
   }
 
   .send-button {
@@ -171,13 +208,20 @@ section {
     font-size: 12px;
   }
 
-
   .info {
     font-size: 12px;
   }
 
   .extra {
     font-size: 12px;
+  }
+
+  .filters {
+    font-size: 12px;
+  }
+
+  .filter-input {
+    width: 350px;
   }
 
   .like-button {

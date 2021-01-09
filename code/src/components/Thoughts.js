@@ -1,12 +1,29 @@
-import React from 'react';
+import React from "react";
 
-import Thought from './thought/Thought';
-import NewInput from './newthought/NewInput';
+import NewInput from "./newthought/NewInput";
+import Filters from "./filters/Filters";
+import Thought from "./thought/Thought";
 
-const Thoughts = ({ thoughts, onLiked, addNewThought }) => {
+const Thoughts = ({
+  thoughts,
+  onLiked,
+  addNewThought,
+  selectedAuthor,
+  handleAuthorChange,
+  removeFilters,
+  selectedCategory,
+  handleCategoryChange
+}) => {
   return (
     <section>
       <NewInput onInputChange={addNewThought} />
+      <Filters
+        selectedAuthor={selectedAuthor}
+        handleAuthorChange={handleAuthorChange}
+        removeFilters={removeFilters}
+        selectedCategory={selectedCategory}
+        handleCategoryChange={handleCategoryChange}
+      />
       {thoughts.map(thought => {
         return (
           <Thought
