@@ -8,19 +8,15 @@ export const App = () => {
   const [thoughts, setThoughts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("");
-  // const THOUGHTS_URL = "https://happy-thoughts-by-m.herokuapp.com/thoughts";
-  const THOUGHTS_URL = "http://localhost:8080/thoughts";
+  const THOUGHTS_URL = "https://happy-thoughts-by-m.herokuapp.com/thoughts";
 
   useEffect(() => {
     if (selectedCategory && selectedAuthor) {
-      // fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}&author=${selectedAuthor}`);
-      fetchThoughts(`http://localhost:8080/thoughts?category=${selectedCategory}&author=${selectedAuthor}`);
+      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}&author=${selectedAuthor}`);
     } else if (selectedCategory) {
-      // fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}`);
-      fetchThoughts(`http://localhost:8080/thoughts?category=${selectedCategory}`);
+      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}`);
     } else if (selectedAuthor) {
-      // fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?author=${selectedAuthor}`);
-      fetchThoughts(`http://localhost:8080/thoughts?author=${selectedAuthor}`);
+      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?author=${selectedAuthor}`);
     } else {
       fetchThoughts(THOUGHTS_URL);
     }

@@ -8,8 +8,7 @@ const AuthorFilter = ({ selectedAuthor, onAuthorChange }) => {
   }, [authors]);
 
   const fetchAuthors = () => {
-    // fetch("https://happy-thoughts-by-m.herokuapp.com/authors")
-    fetch("http://localhost:8080/authors")
+    fetch("https://happy-thoughts-by-m.herokuapp.com/authors")
       .then(response => response.json())
       .then(json => {
         setAuthors(json);

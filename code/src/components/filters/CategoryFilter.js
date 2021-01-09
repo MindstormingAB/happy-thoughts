@@ -8,8 +8,7 @@ const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
   }, [categories]);
 
   const fetchCategories = () => {
-    // fetch("https://happy-thoughts-by-m.herokuapp.com/categories")
-    fetch("http://localhost:8080/categories")
+    fetch("https://happy-thoughts-by-m.herokuapp.com/categories")
       .then(response => response.json())
       .then(json => {
         setCategories(json);
