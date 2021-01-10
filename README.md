@@ -16,6 +16,6 @@ If I had more time, I would have implemented pagination.
 ## View it live
 
 You can take a look at the result on https://happy-tweets-by-m.netlify.app/.
-You are welcome to take a look at my repository on https://github.com/MindstormingAB/happy-thoughts.
+The repository can be found on https://github.com/MindstormingAB/happy-thoughts.
 The API can be found on https://happy-thoughts-by-m.herokuapp.com/, the repository on https://github.com/MindstormingAB/project-happy-thoughts-api
 Enjoy!
