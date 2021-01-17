@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-const CategoryFilter = ({ selectedCategory, onCategoryChange }) => {
+const CategoryFilter = ({ selectedCategory, onCategoryChange, BASE_URL, thoughts }) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     fetchCategories();
-  }, [categories]);
+    // eslint-disable-next-line
+  }, [thoughts]);
 
   const fetchCategories = () => {
-    fetch("https://happy-thoughts-by-m.herokuapp.com/categories")
+    fetch(`${BASE_URL}/categories`)
       .then(response => response.json())
       .then(json => {
         setCategories(json);

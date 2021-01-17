@@ -2,8 +2,8 @@ import React from "react";
 
 import heartIcon from "../../assets/heart-icon.png";
 
-const Likes = ({ id, likes, onLiked }) => {
-  const LIKE_URL = `https://happy-thoughts-by-m.herokuapp.com/thoughts/${id}/like`;
+const Likes = ({ id, likes, onLiked, BASE_URL }) => {
+  const LIKE_URL = `${BASE_URL}/thoughts/${id}/like`;
 
   const handleClick = () => {
     fetch(LIKE_URL, {

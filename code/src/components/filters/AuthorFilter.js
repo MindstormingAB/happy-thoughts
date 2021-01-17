@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-const AuthorFilter = ({ selectedAuthor, onAuthorChange }) => {
+const AuthorFilter = ({ selectedAuthor, onAuthorChange, BASE_URL, thoughts }) => {
   const [authors, setAuthors] = useState([]);
 
   useEffect(() => {
     fetchAuthors();
-  }, [authors]);
+    // eslint-disable-next-line
+  }, [thoughts]);
 
   const fetchAuthors = () => {
-    fetch("https://happy-thoughts-by-m.herokuapp.com/authors")
+    fetch(`${BASE_URL}/authors`)
       .then(response => response.json())
       .then(json => {
         setAuthors(json);

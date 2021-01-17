@@ -12,7 +12,8 @@ const Thoughts = ({
   handleAuthorChange,
   removeFilters,
   selectedCategory,
-  handleCategoryChange
+  handleCategoryChange,
+  BASE_URL
 }) => {
   return (
     <section>
@@ -23,6 +24,8 @@ const Thoughts = ({
         removeFilters={removeFilters}
         selectedCategory={selectedCategory}
         handleCategoryChange={handleCategoryChange}
+        BASE_URL={BASE_URL}
+        thoughts={thoughts}
       />
       {thoughts.map(thought => {
         return (
@@ -35,6 +38,7 @@ const Thoughts = ({
             author={thought.author}
             category={thought.category}
             onLiked={onLiked}
+            BASE_URL={BASE_URL}
           />
         );
       })}

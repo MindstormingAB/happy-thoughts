@@ -8,18 +8,21 @@ export const App = () => {
   const [thoughts, setThoughts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("");
-  const THOUGHTS_URL = "https://happy-thoughts-by-m.herokuapp.com/thoughts";
+  const BASE_URL = "http://localhost:8080";
+  // const BASE_URL = "https://happy-thoughts-by-m.herokuapp.com";
+  const THOUGHTS_URL = `${BASE_URL}/thoughts`;
 
   useEffect(() => {
     if (selectedCategory && selectedAuthor) {
-      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}&author=${selectedAuthor}`);
+      fetchThoughts(`${THOUGHTS_URL}?category=${selectedCategory}&author=${selectedAuthor}`);
     } else if (selectedCategory) {
-      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?category=${selectedCategory}`);
+      fetchThoughts(`${THOUGHTS_URL}?category=${selectedCategory}`);
     } else if (selectedAuthor) {
-      fetchThoughts(`https://happy-thoughts-by-m.herokuapp.com/thoughts?author=${selectedAuthor}`);
+      fetchThoughts(`${THOUGHTS_URL}?author=${selectedAuthor}`);
     } else {
       fetchThoughts(THOUGHTS_URL);
     }
+    // eslint-disable-next-line
   }, [selectedCategory, selectedAuthor]);
 
   const fetchThoughts = (url) => {
@@ -74,6 +77,7 @@ export const App = () => {
         removeFilters={removeFilters}
         selectedCategory={selectedCategory}
         handleCategoryChange={handleCategoryChange}
+        BASE_URL={BASE_URL}
       />
       <Footer />
     </div>
