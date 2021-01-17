@@ -8,8 +8,8 @@ export const App = () => {
   const [thoughts, setThoughts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedAuthor, setSelectedAuthor] = useState("");
-  const BASE_URL = "http://localhost:8080";
-  // const BASE_URL = "https://happy-thoughts-by-m.herokuapp.com";
+  // const BASE_URL = "http://localhost:8080";
+  const BASE_URL = "https://happy-thoughts-by-m.herokuapp.com";
   const THOUGHTS_URL = `${BASE_URL}/thoughts`;
 
   useEffect(() => {
